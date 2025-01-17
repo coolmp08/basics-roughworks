@@ -1,4 +1,4 @@
-// Java program to demonstrate the usage of
+package com.devSense.bases;// Java program to demonstrate the usage of
 // setDaemon() and isDaemon() method.
 
 public class DaemonThread extends Thread

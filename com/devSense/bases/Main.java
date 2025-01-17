@@ -1,3 +1,5 @@
+package com.devSense.bases;
+
 import com.devSense.trials.Address;
 import com.devSense.trials.Employee;
 import com.devSense.trials.EmployeeRec;

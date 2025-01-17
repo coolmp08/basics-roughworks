@@ -1,4 +1,4 @@
-// A Java program for a Client
+package com.devSense.bases;// A Java program for a com.devSense.bases.Client
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

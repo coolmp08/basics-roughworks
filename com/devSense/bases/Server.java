@@ -1,4 +1,4 @@
-// A Java program for a Server
+package com.devSense.bases;// A Java program for a com.devSense.bases.Server
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
@@ -17,12 +17,12 @@ public class Server {
         // starts server and waits for a connection
         try {
             server = new ServerSocket(port);
-            System.out.println("Server started");
+            System.out.println("com.devSense.bases.Server started");
 
             System.out.println("Waiting for a client ...");
 
             socket = server.accept();
-            System.out.println("Client accepted");
+            System.out.println("com.devSense.bases.Client accepted");
 
             // takes input from the client socket
             in = new DataInputStream(
