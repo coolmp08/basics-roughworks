@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Checks {
@@ -8,7 +7,7 @@ public class Checks {
         Stream<String> streamEmpty = Stream.empty();
 
         List<String> basic = Arrays.asList("abc", "abc1", "abc2", "abc3");
-        System.out.println(streamOf(basic).sorted().collect(Collectors.toList()));
+        System.out.println(streamOf(basic).sorted());
 
     }
 
