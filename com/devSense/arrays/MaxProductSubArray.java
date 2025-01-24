@@ -17,12 +17,34 @@ package com.devSense.arrays;
 public class MaxProductSubArray {
 
 
-    static int min(int a, int b, int c) {
-        return Math.min(a, Math.min(b,c));
+    static int maxProductTwoSide(int[] arr) {
+        int n = arr.length;
+        int maxProd = Integer.MIN_VALUE;
+
+        int leftToRight = 0;
+        int rightToLeft = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (leftToRight == 0)
+                leftToRight = 1;
+            if (rightToLeft == 0)
+                rightToLeft = 1;
+
+            leftToRight *= arr[i];
+
+            int j = n - i - 1;
+            rightToLeft *= arr[j];
+
+            maxProd = Math.max(leftToRight, Math.max(rightToLeft, maxProd));
+        }
+        return maxProd;
     }
 
-    static int max(int a, int b, int c) {
-        return Math.max( a, Math.max(b, c));
+    public static void main(String[] args) {
+        int[] arr = {-2, 6, -3, -10, 0, 2};
+        System.out.println(maxProduct(arr));
+
+        System.out.println("Max product from Twoside: "+ maxProductTwoSide(arr));
     }
 
     static int maxProduct(int[] arr) {
@@ -41,9 +63,12 @@ public class MaxProductSubArray {
         return maxProd;
     }
 
-    public static void main(String[] args){
-        int[] arr = { -2, 6, -3, -10, 0, 2 };
-        System.out.println(maxProduct(arr));
+    static int max(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+
+    static int min(int a, int b, int c) {
+        return Math.min(a, Math.min(b, c));
     }
 
 }
