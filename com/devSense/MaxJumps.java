@@ -38,6 +38,9 @@ public class MaxJumps {
      */
     static int totalJumps(int s, int k, int n){
         System.out.println("Finding max number of ways to reach from s to n");
+
+        int[] jmps = new int[n];
+
         return 0;
     }
 }
